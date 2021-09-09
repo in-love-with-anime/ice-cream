@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../fonts/dm-sans-v6-latin-regular.woff2":[["dm-sans-v6-latin-regular.c37abbbf.woff2","FwDo"],"FwDo"],"./../fonts/dm-sans-v6-latin-regular.woff":[["dm-sans-v6-latin-regular.73abdc5b.woff","bGuu"],"bGuu"],"./../fonts/titan-one-v8-latin-regular.woff2":[["titan-one-v8-latin-regular.99caac35.woff2","SF0n"],"SF0n"],"./../fonts/titan-one-v8-latin-regular.woff":[["titan-one-v8-latin-regular.7854b78b.woff","BaVG"],"BaVG"],"./../fonts/dm-sans-v6-latin-500.woff2":[["dm-sans-v6-latin-500.e8ac366e.woff2","gjXB"],"gjXB"],"./../fonts/dm-sans-v6-latin-500.woff":[["dm-sans-v6-latin-500.ef020ea4.woff","lsvi"],"lsvi"],"./../fonts/dm-sans-v6-latin-700.woff2":[["dm-sans-v6-latin-700.e2ac3341.woff2","njW8"],"njW8"],"./../fonts/dm-sans-v6-latin-700.woff":[["dm-sans-v6-latin-700.e17ff466.woff","ODdk"],"ODdk"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/ice-cream/src.0ae66e26.js.map
+//# sourceMappingURL=/ice-cream/src.1419eda0.js.map
