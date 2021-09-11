@@ -1,0 +1,20 @@
+.gallery.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery__section {
+  padding: 0;
+  background-image: linear-gradient(to bottom, $bg-section 40%, $text-secondary 40%);
+  @media screen and (min-width: 768px) {
+    padding: 0 80px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 130px;
+  }
+}
+.gallery__trumb img {
+  width: 100%;
+
+  height: auto;
+  border-radius: 16%;
+}
