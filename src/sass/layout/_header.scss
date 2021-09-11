@@ -1,30 +1,66 @@
 .header {
   position: relative;
 
-  min-height: 480px;
-  width: 100%;
-
   background-image: url('../images/header/hero-icecream.png'),
     radial-gradient(
       circle at 70%,
-      $secondary-color 55%,
-      $bg-hero 55%,
+      $secondary-color 58%,
+      $bg-hero 58%,
       $bg-hero 100%,
       $secondary-color 100%
     );
-
   background-repeat: no-repeat;
-  background-position: bottom right 20%;
-  background-size: inherit;
+  background-position-y: bottom;
+  background-position-x: 84%;
+
+  @media screen and (min-width: 480px) {
+    & {
+      background-image: url('../images/header/hero-icecream.png'),
+        radial-gradient(
+          circle at 70%,
+          $secondary-color 45%,
+          $bg-hero 45%,
+          $bg-hero 100%,
+          $secondary-color 100%
+        );
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      background-image: url('../images/header/hero-icecream.png'),
+        radial-gradient(
+          circle at 70%,
+          $secondary-color 32%,
+          $bg-hero 32%,
+          $bg-hero 100%,
+          $secondary-color 100%
+        );
+      background-position-x: 68%;
+    }
+  }
 
   &--position {
     display: flex;
     flex-direction: column;
     padding-top: 6px;
+    padding-bottom: 160px;
     background-color: transparent;
+
+    @media screen and (min-width: 480px) {
+      & {
+        padding-top: 20px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-top: 38px;
+    }
   }
   &__logo {
+    display: block;
     width: 200px;
+    height: 50px;
   }
 
   &__icon {
@@ -32,52 +68,90 @@
   }
 }
 
-.mobile-menu-button {
-  z-index: 3;
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  margin-left: auto;
-  background-color: transparent;
-  fill: $text-secondary;
-  border: none;
-  border-radius: 50%;
-
-  &:hover,
-  &:focus {
-    fill: $primary-color;
-  }
-
-  &.is-open {
-    fill: $primary-color;
-  }
-
-  &.is-open:hover,
-  &.is-open:focus {
-    fill: $text-secondary;
-  }
-
-  & .menu__open {
-    display: none;
-  }
-
-  &.is-open .menu__open {
-    display: block;
-  }
-
-  &.is-open .menu__close {
+@media screen and (max-width: 767px) {
+  .header__buy-now-button {
     display: none;
   }
 }
 
-.nav {
+@media screen and (min-width: 768px) {
+  .header__buy-now-button {
+    @include primary-button(
+      $padding: 14px 50px,
+      $fontSize: 16px,
+      $lineHeight: 1.31,
+      $textColor: $primary-color,
+      $bgColor: $text-secondary
+    );
+    font-weight: 700;
+
+    &--arrow {
+      margin-left: 20px;
+    }
+  }
+
+  .header__tablet {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .mobile-menu-button {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+
+    @media screen and (min-width: 480px) {
+      & {
+        top: 26px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      & {
+        position: static;
+        margin-left: auto;
+        margin-right: 30px;
+      }
+    }
+
+    &.open-menu {
+      fill: $primary-color;
+      &:hover,
+      &:focus {
+        fill: $text-secondary;
+      }
+    }
+
+    &.close-menu {
+      z-index: 3;
+      fill: $text-secondary;
+
+      &:hover,
+      &:focus {
+        fill: $primary-color;
+      }
+    }
+  }
+}
+
+.mobile-nav {
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 75%;
   height: 100vh;
-  overflow-y: scroll;
   padding: 60px 0;
   background-color: $bg-mobilemenu;
   overflow-y: hidden;
@@ -109,9 +183,15 @@
       color: $primary-color;
     }
   }
+
+  @media screen and (min-width: 480px) {
+    &__link {
+      font-size: 18px;
+    }
+  }
 }
 
-.nav__buy-now-button {
+.mobile-nav__buy-now-button {
   @include primary-button(
     $padding: 14px 50px,
     $fontSize: 16px,
@@ -131,6 +211,22 @@
   &:focus {
     background-color: $btn-light;
   }
+
+  @media screen and (min-width: 480px) {
+    & {
+      @include primary-button(
+        $padding: 14px 50px,
+        $fontSize: 18px,
+        $lineHeight: 1.31,
+        $textColor: $primary-color,
+        $bgColor: $text-secondary
+      );
+    }
+
+    &--arrow {
+      margin-left: 20px;
+    }
+  }
 }
 
 .hero {
@@ -138,17 +234,22 @@
   flex-direction: column;
   position: relative;
 
-  &__thumb {
-    position: absolute;
-    top: 32px;
-    right: 8px;
-    width: 170px;
-    height: 410px;
-  }
+  // &__image {
+  //   position: absolute;
+  //   top: 12px;
+  //   left: 35%;
+  //   width: 480px;
+
+  //   @media screen and (min-width: 480px) {
+  //     & {
+  //       left: 60%;
+  //     }
+  //   }
+  // }
 
   &__title {
     z-index: 1;
-    margin-top: 107px;
+    margin-top: 116px;
     width: 178px;
     font-size: 28px;
     font-weight: 400;
@@ -162,10 +263,33 @@
     font-size: 48px;
     color: $primary-color;
   }
+
+  @media screen and (min-width: 480px) {
+    &__title {
+      width: 202px;
+      font-size: 32px;
+    }
+    &__title--recolor {
+      font-size: 56px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      margin-top: 15px;
+      width: 140px;
+      font-size: 22px;
+    }
+    &__title--recolor {
+      font-size: 34px;
+    }
+  }
 }
 
 .hero__button {
+  z-index: 1;
   @include primary-button($padding: 9px 14px, $fontSize: 9px, $lineHeight: 1.25);
+  font-weight: 400;
 
   &--how-made {
     @include primary-button(
@@ -176,6 +300,22 @@
       $bgColor: $text-secondary
     );
     margin-left: 8px;
+  }
+
+  @media screen and (min-width: 480px) {
+    & {
+      @include primary-button($padding: 9px 14px, $fontSize: 15px, $lineHeight: 1.25);
+
+      &--how-made {
+        @include primary-button(
+          $padding: 9px 14px,
+          $fontSize: 15px,
+          $lineHeight: 1.25,
+          $textColor: $primary-color,
+          $bgColor: $text-secondary
+        );
+      }
+    }
   }
 
   &:hover,
