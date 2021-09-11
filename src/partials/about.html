@@ -1,0 +1,62 @@
+<div class="container__about" id="How_it’s_made?">
+  <section class="container">
+    <div class="about-head">
+      <p class="about-head__subtitle">tradition and love</p>
+      <h2 class="about-head__titel" id="about">how it’s made?</h2>
+    </div>
+    <div class="about">
+      <div class="about-img">
+        <picture>
+          <source
+            media="(min-width: 320px) and (max-width: 767px)"
+            srcset="
+              ./images/about/about-phone@1x.png 1x,
+              ./images/about/about-phone@2x.png 2x,
+              ./images/about/about-phone@3x.png 3x
+            "
+          />
+
+          <source
+            media="(min-width: 768px) and (max-width: 1279px)"
+            srcset="
+              ./images/about/about-tablet@1x.png 1x,
+              ./images/about/about-tablet@2x.png 2x,
+              ./images/about/about-tablet@3x.png 3x
+            "
+          />
+
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ./images/about/about-desctop@1x.png 1x,
+              ./images/about/about-desctop@2x.png 2x,
+              ./images/about/about-desctop@3x.png 3x
+            "
+          />
+          <img
+            src="./images/about/about-phone@1x.png"
+            alt="a jug of milk on the background of a cow"
+          />
+        </picture>
+      </div>
+      <div class="about__description">
+        <p class="about__slogan">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="about__text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
+          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
+          maximus. Cras massa nibh, tincidunt.
+        </p>
+        <p class="about__text about__text--sole">Aliquam erat volutpat. Aenean accumsan.</p>
+        <button class="about__button">
+          Read more
+          <svg class="about__button--icon" width="10" height="10">
+            <use href="images/header/header-icons.svg#icon-moresign"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
