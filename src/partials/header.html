@@ -1,38 +1,50 @@
 <header class="header">
     <div class="container header--position">
         <!-- Логотип хедера -->
-        <a href="" class="header__logo">
-            <svg class="header__logo-icon" width="200" height="50">
-                <use href="images/header/header-icons.svg#icon-logo"></use>
-            </svg></a>
-        <!-- Мобильное меню с навигацией -->
-        <div>
-            <button class="mobile-menu-button is-open" aria-expanded="false" data-menu-button>
-                <svg class="mobile-menu-button__icon" width="40" height="40" aria-label="Mobile menu switcher">
-                    <use class="menu__open" href="images/header/header-icons.svg#burger-open"></use>
-                    <use class="menu__close" href="images/header/header-icons.svg#burger-close"></use>
+        <div class="header__tablet">
+            <a href="" class="header__logo">
+                <svg class="header__logo-icon" width="200" height="50">
+                    <use href="images/header/header-icons.svg#icon-logo"></use>
+                </svg></a>
+            <!-- Мобильное меню с навигацией -->
+            <button class="mobile-menu-button open-menu" aria-expanded="false" aria-controls="mobile-menu" aria-label="Mobile menu open">
+                <svg class="mobile-menu-button__icon" width="40" height="40">
+                    <use href="images/header/header-icons.svg#burger-open"></use>
                 </svg>
             </button>
-            <!-- Навигационное меню -->
-            <nav class="nav" data-menu>
-                <button class="nav__buy-now-button">Buy now <svg class="nav__buy-now-button--arrow" width="10" height="10">
+            <!-- Кнопа Buy now для таблетки -->
+            <button class="header__buy-now-button" aria-label="Buy now">Buy now <svg class="header__buy-now-button--arrow"
+                    width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
                 </svg></button>
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--current" href="#">Home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">How it’s made?</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Our products</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
-                </ul>
-            </nav>
         </div>
+        <!-- Мобильное навигационное меню -->
+        <nav class="mobile-nav" id="mobile-menu">
+            <button class="mobile-menu-button close-menu" aria-label="Mobile menu close">
+                <svg class="mobile-menu-button__icon" width="40" height="40">
+                    <use href="images/header/header-icons.svg#burger-close"></use>
+                </svg>
+            </button>
+            <button class="mobile-nav__buy-now-button" aria-label="Buy now">Buy now <svg class="mobile-nav__buy-now-button--arrow" width="10" height="10">
+                <use href="images/header/header-icons.svg#icon-moresign"></use>
+            </svg></button>
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--current" href="#">Home</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">About us</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">How it’s made?</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Our products</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
         <!-- Герой -->
         <div class="hero">
             <h1 class="hero__title">ice cream made with <span class="hero__title--recolor">passion</span></h1>
+            <!-- <div class="hero__image">
+                <img srcset="images/header/hero-icecream@2x.png 2x, images/header/hero-icecream@3x.png 3x" src="images/header/hero-icecream.png" alt="Our Greatest Icecream" width="180">
+            </div> -->
             <div class="hero__button--display">
-                <button class="hero__button hero__button--products">Products</button>
-                <button class="hero__button hero__button--how-made">How it’s made?</button>
+                <button class="hero__button hero__button--products" aria-label="Products">Products</button>
+                <button class="hero__button hero__button--how-made" aria-label="How it’s made?">How it’s made?</button>
             </div>
         </div>
     </div>
