@@ -425,11 +425,11 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 80px;
+    padding-bottom: 90px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 80px;
+    padding-bottom: 90px;
   }
 }
 
@@ -510,7 +510,12 @@
 
    @media screen and (min-width: 768px) {
     left: calc(100% / 2 - 20px);
-    bottom: 40px;
+    bottom: 50px;
+   }
+
+   @media screen and (min-width: 1280px) {
+     left: calc(100% / 2 - 20px);
+     bottom: 50px;
    }
 }
 
