@@ -36,7 +36,7 @@
       background-image: url('../images/about/bg-about-desktop@1x.png');
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: left bottom -27px;
+      background-position: left bottom 100px;
     }
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -51,6 +51,12 @@
       & {
         background-image: url('../images/about/bg-about-desktop@3x.png');
       }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      background-position: center bottom -21px;
     }
   }
 }
