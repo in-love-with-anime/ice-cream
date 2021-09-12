@@ -1,0 +1,37 @@
+<!-- Модальное окно -->
+<div class="modal__backdrop is-hidden" header-modal>
+    <div class="modal">
+        <button class="modal__close-button" type="button" aria-label="Modal close button" header-modal-close>
+            <svg class="modal__close-icon" width="32" height="32">
+                <use href="./images/icons/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <!-- Форма заявки -->
+        <form name="request-form" autocomplete="on">
+
+            <b class="request-form__slogan">Leave your details, we will call you back</b>
+
+            <div class="request-form__field">
+                <label class="request-form__label" for="user-name">Name</label>
+                <input class="request-form__input" type="text" name="user-name" id="user-name" autofocus>
+            </div>
+
+            <div class="request-form__field">
+                <label class="request-form__label" for="user-phone">Phone</label>
+                <input class="request-form__input" type="tel" name="user-phone" id="user-phone">
+            </div>
+
+            <div class="request-form__button">
+                <button class="request-form__submit" type="submit">Send</button>
+            </div>
+
+        </form>
+
+        <picture class="information__image">
+            <source srcset="./images/header/milk-desktop/milk.png 1x, ./images/header/milk-desktop/milk@2x.png 2x, ./images/header/milk-desktop/milk@3x.png 3x">
+            <img src="./images/header/milk-desktop/milk.png" alt="Bio-organic milk">
+        </picture>
+
+    </div>
+</div>

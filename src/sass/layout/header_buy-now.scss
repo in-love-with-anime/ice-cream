@@ -1,0 +1,171 @@
+.modal__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(129, 83, 109, 0.4);
+
+    opacity: 1;
+    overflow-y: scroll;
+
+    @include transition1 (opacity);
+}
+
+.modal__backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal__backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    padding: 50px;
+
+    background-color: $bg-section;
+    border-radius: 20px;
+
+    @include transition1 (transform);
+
+        @media screen and (max-width: 767px) {
+        max-width: 450px;
+        width: 100vw;
+        max-height: 609px;
+        height: 100vh;
+    }
+        @media screen and (min-width: 768px) {
+            width: 450px;
+            height: 609px;
+    } 
+
+        @media screen and (min-width: 1200px) {
+            width: 528px;
+            height: 581px;
+    } 
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.modal__close-icon {
+    fill: $bg-footer-icon;
+
+    @include transition1 (fill);
+
+    .modal__close-button:hover &, .modal__close-button:focus & {
+        fill: $bg-contacts-button;
+    }
+}
+
+/* Форма заявки */
+
+.request-form__slogan {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.15;
+    text-align: center;
+
+    color: $bg-contacts-button;
+}
+
+.request-form__field {
+    position: relative;
+}
+
+.request-form__label {
+    display: flex;
+    margin-bottom: 4px;
+
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: $bg-contacts-button;
+}
+
+.request-form__input {
+    margin-bottom: 25px;
+    padding-left: 42px;
+    height: 40px;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+
+    @include transition1 (border-color);
+
+    &:focus {
+        border-color: $primary-color;
+        outline: none;
+    }
+        @media screen and (max-width: 1199px) {
+            max-width: 370px;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 448px;
+        } 
+}
+
+.request-form__input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #ffe1e8 inset !important;
+}
+
+
+.request-form__button {
+    text-align: center;
+}
+
+.request-form__submit {
+    padding: 10px 0;
+    max-width: 200px;
+    width: 100%;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+
+    color: $text-secondary;
+    background-color: $bg-footer-icon;
+
+    border: 0;
+    box-shadow: 0px 4px 10px rgba(185, 86, 127, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+
+    @include transition1 (background-color);
+
+    &:hover, &:focus {
+        background-color: $bg-contacts-button;
+    }
+}
