@@ -1,13 +1,29 @@
+.customer-reviews {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 80px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-top: 121px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 123px;
+    }
+}
 .slider {
     margin: 0 auto;
     @media screen and (min-width: 320px) and (max-width: 767px) {
       max-width: 280px;
+      margin-top: 80px;
     }
     @media screen and (min-width: 768px) {
-      max-width: 620px;  
+      max-width: 620px;
+      margin-top: 121px;  
     }
     @media screen and (min-width: 1280px) {
         max-width: 926px;
+        margin-top: 123px;
     }
 }
 .slider__item {
@@ -28,7 +44,7 @@
     @media screen and (min-width: 768px) {
         &::after {
             bottom: 50%;
-            left: 9%;
+            left: 6%;
         }
     }
     @media screen and (min-width: 1280px) {
@@ -46,7 +62,6 @@
     z-index: 3;
     margin: 0 auto;
     height: 100%;
-    font-family: $primary-font;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.6;
@@ -72,14 +87,13 @@
         max-width: 460px;
         font-size: 14px;
         line-height: 2.1;
+        letter-spacing: 0.04em;
         background-image: repeating-linear-gradient(to bottom, transparent, transparent 27px, $border 27px, $border 29px);
     }
     @media screen and (min-width: 1280px) {
         max-width: 750px;
         font-size: 16px;
         line-height: 1.9;
-        letter-spacing: 0.04em;
-
     }
 }
 .slider__box {
@@ -93,14 +107,12 @@
         max-width: 620px;
     }
     @media screen and (min-width: 1280px) {
-        max-width: 960px;
+        max-width: 926px;
         padding: 32px 50px;
-        border: solid 1px $text-primary;
     }
 
 }
 .slider__name {
-    font-style: $primary-font;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.9;
