@@ -1,20 +1,13 @@
 .container__about {
   padding: 125px 0 39px;
   background: $bg-section;
-  // background-image: linear-gradient(to right, $bg-section, $bg-section),
-  // url('../images/about/bg-about-mobile@1x.png');
-
-  // background-image: url('../images/about/bg-about-mobile@1x.png');
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center;
 
   @media screen and (max-width: 767px) {
     & {
       background-image: url('../images/about/bg-about-mobile@1x.png');
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: bottom;
+      background-position: center bottom 100px;
     }
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -43,7 +36,7 @@
       background-image: url('../images/about/bg-about-desktop@1x.png');
       background-size: contain;
       background-repeat: no-repeat;
-      background-position: bottom;
+      background-position: center bottom 100px;
     }
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -58,6 +51,13 @@
       & {
         background-image: url('../images/about/bg-about-desktop@3x.png');
       }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      background-size: auto;
+      background-position: center bottom -21px;
     }
   }
 }
@@ -85,9 +85,7 @@
   font-size: 18px;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: $secondary-color;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -99,6 +97,7 @@
     & {
       font-size: 30px;
       line-height: 1.1;
+      letter-spacing: 0.04em;
     }
   }
 }
@@ -109,9 +108,8 @@
   font-size: 39px;
   line-height: 1.1;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: $primary-color;
 
   @media screen and (min-width: 768px) {
@@ -122,6 +120,7 @@
 
   @media screen and (min-width: 1280px) {
     & {
+      letter-spacing: 0.06em;
       font-size: 58px;
     }
   }
@@ -137,14 +136,15 @@
 }
 
 .about-img {
-  // margin: 0 auto;
   width: 280px;
   height: 279px;
+
   @media screen and (min-width: 320px) and (max-width: 767px) {
     & {
       margin: 0 auto 46px;
     }
   }
+
   @media screen and (min-width: 768px) {
     & {
       width: 340px;
@@ -177,6 +177,7 @@
       width: 340px;
     }
   }
+
   @media screen and (min-width: 1280px) {
     & {
       // width: 50%;
@@ -186,19 +187,13 @@
 }
 
 .about__slogan {
-  // margin-bottom: 28px;
-  // min-width: 220px;
-  font-family: $primary-font;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
-
   color: $text-primary;
 
   @media screen and (min-width: 768px) {
     & {
-      // width: 340px;
       font-size: 14px;
       line-height: 1.8;
     }
@@ -206,38 +201,25 @@
 
   @media screen and (min-width: 1280px) {
     & {
-      // width: 463px;
+      letter-spacing: 0.04em;
       font-size: 16px;
     }
   }
 }
 
 .about__text {
-  // min-width: 220px;
   margin-top: 29px;
-  font-family: $primary-font;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
-
   color: $text-primary-lighten;
-
-  // @media screen and (max-width: 767px) {
-  //   & {
-  //     background-image: url('../images/about/bg-about-mobile@1x.png');
-  //     background-size: cover;
-  //     background-repeat: no-repeat;
-  //     background-position: center;
-  //   }
-  // }
 
   @media screen and (min-width: 768px) {
     & {
+      letter-spacing: 0.04em;
       margin-top: 25px;
       font-size: 14px;
       line-height: 1.8;
-      // width: 340px;
     }
   }
 
@@ -246,7 +228,6 @@
       margin-top: 35px;
       font-size: 14px;
       line-height: 1.9;
-      // width: 463px;
     }
   }
 }
@@ -267,28 +248,6 @@
   }
 }
 
-// .about__button {
-//   display: flex;
-//   align-items: center;
-//   text-align: center;
-//   margin-top: 17px;
-//   padding: 19px 37px;
-//   font-family: $primary-font;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.3;
-//   background: $text-secondary;
-//   border: 1px solid $text-secondary;
-//   border-radius: 22px;
-//   color: $primary-color;
-//   cursor: pointer;
-
-//   &:hover,
-//   &:focus {
-//     background: #232323;
-//     border: 1px solid $primary-color;
-//   }
-// }
 .about__button {
   @include primary-button(
     $padding: 12px 33px,
@@ -305,6 +264,7 @@
       margin-top: 56px;
     }
   }
+
   @media screen and (min-width: 1280px) {
     & {
       margin-top: 45px;
