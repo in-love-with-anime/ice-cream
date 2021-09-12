@@ -6,13 +6,24 @@
                 <svg class="header__logo-icon" width="200" height="50">
                     <use href="images/header/header-icons.svg#icon-logo"></use>
                 </svg></a>
+            <!-- Навигация для Десктоп-версии -->
+            <nav class="desktop-nav">
+                <ul class="desktop-nav__list">
+                    <li class="desktop-nav__item"><a class="desktop-nav__link" href="#">Home</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link" href="#">About us</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link" href="#">How it’s made?</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link" href="#">Our products</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
             <!-- Мобильное меню с навигацией -->
             <button class="mobile-menu-button open-menu" aria-expanded="false" aria-controls="mobile-menu" aria-label="Mobile menu open">
                 <svg class="mobile-menu-button__icon" width="40" height="40">
                     <use href="images/header/header-icons.svg#burger-open"></use>
                 </svg>
             </button>
-            <!-- Кнопа Buy now для таблетки -->
+            <!-- Кнопка "Buy now" для таблетки -->
             <button class="header__buy-now-button" aria-label="Buy now">Buy now <svg class="header__buy-now-button--arrow"
                     width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
@@ -29,7 +40,7 @@
                 <use href="images/header/header-icons.svg#icon-moresign"></use>
             </svg></button>
             <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a class="mobile-nav__link mobile-nav__link--current" href="#">Home</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Home</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">About us</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">How it’s made?</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link" href="#">Our products</a></li>
@@ -37,14 +48,48 @@
             </ul>
         </nav>
         <!-- Герой -->
-        <div class="hero">
-            <h1 class="hero__title">ice cream made with <span class="hero__title--recolor">passion</span></h1>
-            <!-- <div class="hero__image">
-                <img srcset="images/header/hero-icecream@2x.png 2x, images/header/hero-icecream@3x.png 3x" src="images/header/hero-icecream.png" alt="Our Greatest Icecream" width="180">
-            </div> -->
-            <div class="hero__button--display">
-                <button class="hero__button hero__button--products" aria-label="Products">Products</button>
-                <button class="hero__button hero__button--how-made" aria-label="How it’s made?">How it’s made?</button>
+        <div class="hero__section">
+            <div class="hero">
+                <h1 class="hero__title">ice cream made with <span class="hero__title--recolor">passion</span></h1>
+                <!-- Большая мороженка с кружком -->
+                <span class="hero__image--background"></span>
+                <picture class="hero__image">
+                    <source srcset="./images/header/icecream-desktop/icecream@2x.png 2x, ./images/header/icecream-desktop/icecream@3x.png 3x">
+                    <img src="./images/header/icecream-desktop/icecream.png" alt="Our Greatest Icecream">
+                </picture>
+                <!-- Две маленькие кнопки -->
+                <div class="hero__button--display">
+                    <button class="hero__button hero__button--products" aria-label="Products">Products</button>
+                    <button class="hero__button hero__button--how-made" aria-label="How it’s made?">How it’s made?</button>
+                </div>
+                <!-- Героическое описание молока -->
+                <div class="information">
+                    <picture class="information__image">
+                        <source srcset="./images/header/milk-desktop/milk.png 1x, ./images/header/milk-desktop/milk@2x.png 2x, ./images/header/milk-desktop/milk@3x.png 3x">
+                        <img src="./images/header/milk-desktop/milk.png" alt="Bio-organic milk">
+                    </picture>
+                    <div class="information__position">
+                        <p class="information__disc">Obcaecati totam dolore fugiat at earum aperiam vel tempore officia aliquid culpa a
+                            nulla
+                            molestiae.</p>
+                        <button class="information__button"><svg width="8" height="8">
+                                <use href="images/header/header-icons.svg#icon-arrow-right"></use>
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Краевые СВГ и Галочка -->
+            <div class="hero__elements">
+                <svg class="hero__elements--1" width="55" height="56">
+                    <use href="images/header/header-icons.svg#Group-22"></use>
+                </svg>
+                <svg class="hero__elements--2" width="63" height="55">
+                    <use href="images/header/header-icons.svg#Group-23"></use>
+                </svg>
+                <picture class="hero__elements--3">
+                    <source srcset="./images/header/galochka-desktop/galochka@2x.png 2x, ./images/header/galochka-desktop/galochka@3x.png 3x">
+                    <img src="./images/header/galochka-desktop/galochka.png" alt="So tasty!">
+                </picture>
             </div>
         </div>
     </div>
