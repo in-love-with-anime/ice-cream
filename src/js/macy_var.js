@@ -1,14 +1,14 @@
 var macy = Macy({
   container: '#macy',
   mobileFirst: true,
-  trueOrder: false,
-  waitForImages: false,
+  trueOrder: true,
+  waitForImages: true,
+  useContainerForBreakpoints: false,
   margin: 5,
   columns: 1,
   breakAt: {
-    1200: 6,
-    940: 6,
-    520: 2,
-    480: 1,
+    481: 1,
+    768: 5,
+    1200: 5,
   },
 });
