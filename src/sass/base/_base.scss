@@ -3,3 +3,8 @@
     font-family: $primary-font;
     scroll-behavior: smooth;
  }
+
+ *::selection {
+   color: $text-secondary;
+   background-color: $primary-color;
+ }
