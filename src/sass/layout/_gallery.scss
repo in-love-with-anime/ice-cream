@@ -1,5 +1,5 @@
 .gallery.container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 .gallery__section {
@@ -12,9 +12,24 @@
     padding: 0 130px;
   }
 }
+
+.gallery__trumb {
+  border-radius: 16%;
+  object-fit: cover;
+  width: 100px;
+  height: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+}
+
 .gallery__trumb img {
   width: 100%;
-
-  height: auto;
+  height: 100%;
   border-radius: 16%;
+  object-fit: cover;
 }
