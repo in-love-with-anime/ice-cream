@@ -25,6 +25,12 @@
     display: block;
     width: 200px;
     height: 50px;
+    @include transition1($firstProperty: transform);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
   }
 
   &__icon {
@@ -61,9 +67,13 @@
       $bgColor: $text-secondary
     );
     font-weight: 700;
-
+    @include transition1($firstProperty: background-color);
     &--arrow {
       margin-left: 20px;
+    }
+    &:hover,
+    &:focus {
+      background-color: $btn-light;
     }
   }
 }
@@ -102,6 +112,8 @@
 
     &.open-menu {
       fill: $primary-color;
+      @include transition1($firstProperty: fill);
+
       &:hover,
       &:focus {
         fill: $text-secondary;
@@ -114,6 +126,7 @@
       top: 12px;
       right: 20px;
       fill: $text-secondary;
+      @include transition1($firstProperty: fill);
 
       &:hover,
       &:focus {
@@ -155,6 +168,7 @@
     color: $text-secondary;
     border-top: 1px solid $border-mobilemenu;
     border-bottom: 1px solid $border-mobilemenu;
+    @include transition1($firstProperty: color);
 
     &:hover,
     &:focus {
@@ -200,6 +214,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   margin-left: 20px;
+  @include transition1($firstProperty: background-color);
 
   &--arrow {
     margin-left: 16px;
@@ -401,6 +416,7 @@
       }
     }
   }
+  @include transition1($firstProperty: background-color);
 
   &:hover,
   &:focus {
@@ -457,6 +473,12 @@
       fill: $primary-color;
       border-radius: 50%;
       text-align: center;
+      @include transition1($firstProperty: background-color);
+
+      &:hover,
+      &:focus {
+        background-color: $btn-light;
+      }
     }
 
     @media screen and (min-width: 1280px) {
@@ -534,9 +556,14 @@
 
     &__item {
       margin-right: 35px;
+      @include transition1($firstProperty: transform);
 
       &:last-child {
         margin-right: 0;
+      }
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
       }
     }
 
@@ -545,6 +572,12 @@
       font-size: 16px;
       line-height: 1.31;
       font-weight: 700;
+      @include transition1($firstProperty: color);
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
     }
   }
 }
