@@ -1,0 +1,126 @@
+// Modal franchise
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 93px 15px;
+  overflow-y: scroll;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.franchise-modal {
+  position: relative;
+  background-color: $bg-hero;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 30px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+
+  @media screen and (max-width: 479px) {
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.backdrop.is-hidden .franchise-modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.franchise-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.franchise-modal__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: 0.04em;
+  color: $bg-contacts-button;
+}
+
+.franchise-modal__input {
+  padding: 10px;
+  border: 2px solid $bg-contacts-button;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.franchise-modal__close {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.franchise-modal__icon {
+  fill: #fff;
+}
+
+.franchise-modal__title {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Titan One",
+    cursive;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $bg-contacts-button;
+}
+
+.franchise-modal__text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $text-secondary;
+}
+
+.franchise-submit__btn {
+  display: block;
+  margin: 0 auto;
+  border: transparent;
+  border-radius: 22px;
+  height: 45px;
+  width: 150px;
+  font-size: 16px;
+  line-height: 1.31;
+  letter-spacing: 0.04em;
+  color: $bg-contacts-button;
+  text-align: center;
+}
