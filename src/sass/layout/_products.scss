@@ -503,6 +503,8 @@
 
 .read-less {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
 
    @media screen and (max-width: 767px) {
     left: calc(100% / 2 - 20px);
@@ -544,4 +546,26 @@
 
 .read-less {
   display: none;
+}
+
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: visibility 500ms linear 300ms;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: $text-secondary;
+  color: $primary-color;
+  font-size: 10px;
+  position: absolute;
+  padding: 2px 5px;
+  bottom: -70%;
+  left: -125%;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
 }
