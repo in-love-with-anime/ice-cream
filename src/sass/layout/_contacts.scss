@@ -154,10 +154,95 @@
   &__inverse-bracket {
     margin-left: 13px;
   }
+
+  // флексы и верхние маржины для списка кнопок 
+
+  @media screen and (max-width: 767px) {
+    margin-top: 54px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 81px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 86px;
+  }
 }
 
 // ссылка Locations
 
 .contacts__locations {
+  display: inline-block;
+
   color: $text-secondary;
+  background-color: $bg-contacts-button;
+  border-radius: 22px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 161px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 191px;
+    height: 44px;
+    margin-right: 15px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 44px;
+    margin-right: 15px;
+  }
+}
+
+.button-set__inverse-button {
+   display: inline-block;
+
+   color: $primary-color;
+   background-color: $text-secondary;
+   border-radius: 22px;
+
+   @media screen and (max-width: 767px) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 161px;
+     height: 44px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+   @media screen and (min-width: 768px) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 174px;
+     height: 44px;
+   }
+
+   @media screen and (min-width: 1280px) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 180px;
+     height: 44px;
+   }
 }
