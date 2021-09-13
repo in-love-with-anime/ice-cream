@@ -1,583 +1,615 @@
 .header {
-  position: relative;
-  background-color: $bg-hero;
-  overflow: hidden;
+	position: relative;
+	background-color: $bg-hero;
+	overflow: hidden;
 
-  &--position {
-    display: flex;
-    flex-direction: column;
-    padding-top: 6px;
-    padding-bottom: 160px;
-    background-color: transparent;
+	&--position {
+		display: flex;
+		flex-direction: column;
+		padding-top: 6px;
+		padding-bottom: 160px;
+		background-color: transparent;
 
-    @media screen and (min-width: 480px) {
-      & {
-        padding-top: 20px;
-      }
-    }
+		@media screen and (min-width: 480px) {
+			& {
+				padding-top: 20px;
+			}
+		}
 
-    @media screen and (min-width: 768px) {
-      padding-top: 38px;
-      padding-bottom: 30px;
-    }
-  }
-  &__logo {
-    display: block;
-    width: 200px;
-    height: 50px;
-    @include transition1($firstProperty: transform);
+		@media screen and (min-width: 768px) {
+			padding-top: 38px;
+			padding-bottom: 30px;
+		}
+	}
+	&__logo {
+		display: block;
+		width: 200px;
+		height: 50px;
+		@include transition1($firstProperty: transform);
 
-    &:hover,
-    &:focus {
-      transform: scale(1.2);
-    }
-  }
+		&:hover,
+		&:focus {
+			transform: scale(1.2);
+		}
+	}
 
-  &__icon {
-    background-color: $primary-color;
-  }
+	&__icon {
+		background-color: $primary-color;
+	}
 
-  @media screen and (min-width: 1280px) {
-    & .container {
-      padding: 38px 45px 30px;
-    }
-  }
+	@media screen and (min-width: 1280px) {
+		& .container {
+			padding: 38px 45px 30px;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .header__buy-now-button {
-    display: none;
-  }
+	.header__buy-now-button {
+		display: none;
+	}
 }
 
 .header__tablet {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 @media screen and (min-width: 768px) {
-  .header__buy-now-button {
-    z-index: 1;
-    @include primary-button(
-      $padding: 14px 50px,
-      $fontSize: 16px,
-      $lineHeight: 1.31,
-      $textColor: $primary-color,
-      $bgColor: $text-secondary
-    );
-    font-weight: 700;
-    @include transition1($firstProperty: background-color);
-    &--arrow {
-      margin-left: 20px;
-    }
-    &:hover,
-    &:focus {
-      background-color: $btn-light;
-    }
-  }
+	.header__buy-now-button {
+		z-index: 1;
+		@include primary-button(
+			$padding: 14px 50px,
+			$fontSize: 16px,
+			$lineHeight: 1.31,
+			$textColor: $primary-color,
+			$bgColor: $text-secondary
+		);
+		font-weight: 700;
+		@include transition1($firstProperty: background-color);
+		&--arrow {
+			margin-left: 20px;
+		}
+		&:hover,
+		&:focus {
+			background-color: $btn-light;
+		}
+	}
 }
 @media screen and (min-width: 1280px) {
-  .mobile-menu-button {
-    display: none;
-  }
+	.mobile-menu-button {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 1279px) {
-  .mobile-menu-button {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
+	.mobile-menu-button {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		border-radius: 50%;
 
-    @media screen and (min-width: 480px) {
-      & {
-        top: 26px;
-      }
+		@media screen and (min-width: 480px) {
+			& {
+				top: 26px;
+			}
 
-      &.close-menu {
-        right: 20px;
-      }
-    }
+			&.close-menu {
+				right: 20px;
+			}
+		}
 
-    @media screen and (min-width: 768px) {
-      &.open-menu {
-        z-index: 1;
-        position: static;
-        margin-left: auto;
-        margin-right: 30px;
-      }
-    }
+		@media screen and (min-width: 768px) {
+			&.open-menu {
+				z-index: 1;
+				position: static;
+				margin-left: auto;
+				margin-right: 30px;
+			}
+		}
 
-    &.open-menu {
-      fill: $primary-color;
-      @include transition1($firstProperty: fill);
+		&.open-menu {
+			fill: $primary-color;
+			@include transition1($firstProperty: fill);
 
-      &:hover,
-      &:focus {
-        fill: $text-secondary;
-      }
-    }
+			&:hover,
+			&:focus {
+				fill: $text-secondary;
+			}
+		}
 
-    &.close-menu {
-      z-index: 3;
-      position: absolute;
-      top: 12px;
-      right: 20px;
-      fill: $text-secondary;
-      @include transition1($firstProperty: fill);
+		&.close-menu {
+			z-index: 3;
+			position: absolute;
+			top: 12px;
+			right: 20px;
+			fill: $text-secondary;
+			@include transition1($firstProperty: fill);
 
-      &:hover,
-      &:focus {
-        fill: $primary-color;
-      }
-    }
-  }
+			&:hover,
+			&:focus {
+				fill: $primary-color;
+			}
+		}
+	}
+}
+
+
+//Мобильное навигационное меню
+.mobile__backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+
+	background-color: rgba(25, 28, 38, 0.2);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+							0px 2px 4px rgba(0, 0, 0, 0.08),
+							0px 1px 3px rgba(0, 0, 0, 0.16);
+
+	opacity: 1;
+	overflow-y: scroll;
+
+	@include transition1(opacity);
+
+	@media screen and (min-width: 768px) {
+			display: none;
+	}
+}
+
+.mobile__backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
 }
 
 .mobile-nav {
-  z-index: 3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 75%;
-  height: 100vh;
-  padding: 60px 0;
-  background-color: $bg-mobilemenu;
-  overflow-y: hidden;
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 75%;
+	height: 100vh;
+	padding: 60px 0;
+	background-color: $bg-mobilemenu;
+	overflow-y: hidden;
 
-  transform: translate(140%);
-  @include transition1($firstProperty: transform);
+	transform: translate(140%);
 
-  &.is-open {
-    transform: translate(34%);
-  }
+	@include transition1 (transform);
 
-  &__list {
-    font-family: $primary-font;
-  }
+	&.is-open {
+		transform: translate(34%);
+	}
 
-  &__link {
-    display: block;
+	&__list {
+		font-family: $primary-font;
+	}
 
-    padding: 12px 20px;
-    font-size: 14px;
-    line-height: 1.28;
-    font-weight: 700;
-    color: $text-secondary;
-    border-top: 1px solid $border-mobilemenu;
-    border-bottom: 1px solid $border-mobilemenu;
-    @include transition1($firstProperty: color);
+	&__link {
+		display: block;
 
-    &:hover,
-    &:focus {
-      color: $primary-color;
-    }
-  }
+		padding: 12px 20px;
+		font-size: 14px;
+		line-height: 1.28;
+		font-weight: 700;
+		color: $text-secondary;
+		border-top: 1px solid $border-mobilemenu;
+		border-bottom: 1px solid $border-mobilemenu;
 
-  @media screen and (min-width: 480px) {
-    & {
-      width: 60%;
-      transform: translate(170%);
-    }
+		@include transition1 (color);
 
-    &__link {
-      font-size: 18px;
-    }
+		&:hover,
+		&:focus {
+			color: $primary-color;
+		}
+	}
 
-    &.is-open {
-      transform: translate(67%);
-    }
-  }
+	@media screen and (min-width: 480px) {
+		& {
+			width: 60%;
+			transform: translate(170%);
+		}
 
-  @media screen and (min-width: 768px) {
-    & {
-      width: 50%;
-      transform: translate(200%);
-    }
+		&__link {
+			font-size: 18px;
+		}
 
-    &.is-open {
-      transform: translate(100%);
-    }
-  }
+		&.is-open {
+			transform: translate(67%);
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		& {
+			width: 50%;
+			transform: translate(200%);
+		}
+
+		&.is-open {
+			transform: translate(100%);
+		}
+	}
 }
 
 .mobile-nav__buy-now-button {
-  @include primary-button(
-    $padding: 14px 50px,
-    $fontSize: 16px,
-    $lineHeight: 1.31,
-    $textColor: $primary-color,
-    $bgColor: $text-secondary
-  );
-  font-weight: 700;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  @include transition1($firstProperty: background-color);
+	@include primary-button(
+		$padding: 14px 50px,
+		$fontSize: 16px,
+		$lineHeight: 1.31,
+		$textColor: $primary-color,
+		$bgColor: $text-secondary
+	);
+	font-weight: 700;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	@include transition1($firstProperty: background-color);
 
-  &--arrow {
-    margin-left: 16px;
-  }
+	&--arrow {
+		margin-left: 16px;
+	}
 
-  &:hover,
-  &:focus {
-    background-color: $btn-light;
-  }
+	&:hover,
+	&:focus {
+		background-color: $btn-light;
+	}
 
-  @media screen and (min-width: 480px) {
-    & {
-      @include primary-button(
-        $padding: 14px 50px,
-        $fontSize: 18px,
-        $lineHeight: 1.31,
-        $textColor: $primary-color,
-        $bgColor: $text-secondary
-      );
-    }
+	@media screen and (min-width: 480px) {
+		& {
+			@include primary-button(
+				$padding: 14px 50px,
+				$fontSize: 18px,
+				$lineHeight: 1.31,
+				$textColor: $primary-color,
+				$bgColor: $text-secondary
+			);
+		}
 
-    &--arrow {
-      margin-left: 20px;
-    }
-  }
+		&--arrow {
+			margin-left: 20px;
+		}
+	}
 }
 
 .hero__section {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-  @media screen and (min-width: 1280px) {
-    padding-left: 115px;
-  }
+	@media screen and (min-width: 1280px) {
+		padding-left: 115px;
+	}
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 
-  &__image {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    width: 171px;
-    height: 410px;
-    top: 40px;
-    left: 105px;
+	&__image {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		width: 171px;
+		height: 410px;
+		top: 40px;
+		left: 105px;
 
-    @media screen and (min-width: 480px) {
-      & {
-        top: 22px;
-        left: 56%;
-        width: 190px;
-      }
-    }
-    @media screen and (min-width: 768px) {
-      & {
-        top: 1px;
-        left: 108%;
-        width: 175px;
-      }
-    }
-    @media screen and (min-width: 1280px) {
-      top: 21px;
-      left: 155%;
-      width: 230px;
-    }
-  }
+		@media screen and (min-width: 480px) {
+			& {
+				top: 22px;
+				left: 56%;
+				width: 190px;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			& {
+				top: 1px;
+				left: 108%;
+				width: 175px;
+			}
+		}
+		@media screen and (min-width: 1280px) {
+			top: 21px;
+			left: 155%;
+			width: 230px;
+		}
+	}
 
-  &__title {
-    z-index: 2;
-    margin-top: 116px;
-    width: 178px;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: $text-secondary;
-    font-family: $secondary-font;
-    text-transform: uppercase;
-  }
+	&__title {
+		z-index: 2;
+		margin-top: 116px;
+		width: 178px;
+		font-size: 28px;
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: $text-secondary;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+	}
 
-  &__title--recolor {
-    font-size: 48px;
-    color: $primary-color;
-  }
+	&__title--recolor {
+		font-size: 48px;
+		color: $primary-color;
+	}
 
-  @media screen and (min-width: 480px) {
-    &__title {
-      width: 202px;
-      font-size: 32px;
-    }
-    &__title--recolor {
-      font-size: 56px;
-    }
-  }
+	@media screen and (min-width: 480px) {
+		&__title {
+			width: 202px;
+			font-size: 32px;
+		}
+		&__title--recolor {
+			font-size: 56px;
+		}
+	}
 
-  @media screen and (min-width: 768px) {
-    &__title {
-      margin-top: 15px;
-      width: 200px;
-      font-size: 26px;
-    }
-    &__title--recolor {
-      font-size: 46px;
-    }
-  }
+	@media screen and (min-width: 768px) {
+		&__title {
+			margin-top: 15px;
+			width: 200px;
+			font-size: 26px;
+		}
+		&__title--recolor {
+			font-size: 46px;
+		}
+	}
 
-  @media screen and (min-width: 1280px) {
-    &__title {
-      margin-top: 84px;
-      width: 240px;
-      font-size: 38px;
-    }
-    &__title--recolor {
-      font-size: 58px;
-    }
-  }
+	@media screen and (min-width: 1280px) {
+		&__title {
+			margin-top: 84px;
+			width: 240px;
+			font-size: 38px;
+		}
+		&__title--recolor {
+			font-size: 58px;
+		}
+	}
 }
 
 .hero__image--background {
-  position: absolute;
-  top: 0;
-  left: 24px;
-  width: 346px;
-  height: 344px;
-  border-radius: 50%;
-  background: $secondary-color;
+	position: absolute;
+	top: 0;
+	left: 24px;
+	width: 346px;
+	height: 344px;
+	border-radius: 50%;
+	background: $secondary-color;
 
-  @media screen and (min-width: 480px) {
-    & {
-      width: 400px;
-      height: 400px;
-      top: 20px;
-      left: 30px;
-    }
-  }
+	@media screen and (min-width: 480px) {
+		& {
+			width: 400px;
+			height: 400px;
+			top: 20px;
+			left: 30px;
+		}
+	}
 
-  @media screen and (min-width: 768px) {
-    width: 360px;
-    height: 360px;
-    top: -58px;
-    left: 243px;
-  }
+	@media screen and (min-width: 768px) {
+		width: 360px;
+		height: 360px;
+		top: -58px;
+		left: 243px;
+	}
 
-  @media screen and (min-width: 1280px) {
-    width: 538px;
-    height: 538px;
-    top: -20px;
-    left: 340px;
-  }
+	@media screen and (min-width: 1280px) {
+		width: 538px;
+		height: 538px;
+		top: -20px;
+		left: 340px;
+	}
 }
 
 .hero__button {
-  z-index: 1;
-  @include primary-button($padding: 9px 14px, $fontSize: 9px, $lineHeight: 1.25);
-  font-weight: 400;
+	z-index: 1;
+	@include primary-button($padding: 9px 14px, $fontSize: 9px, $lineHeight: 1.25);
+	font-weight: 400;
 
-  &--how-made {
-    @include primary-button(
-      $padding: 9px 14px,
-      $fontSize: 9px,
-      $lineHeight: 1.25,
-      $textColor: $primary-color,
-      $bgColor: $text-secondary
-    );
-    margin-left: 8px;
-  }
+	&--how-made {
+		@include primary-button(
+			$padding: 9px 14px,
+			$fontSize: 9px,
+			$lineHeight: 1.25,
+			$textColor: $primary-color,
+			$bgColor: $text-secondary
+		);
+		margin-left: 8px;
+	}
 
-  @media screen and (min-width: 480px) {
-    & {
-      @include primary-button($padding: 9px 14px, $fontSize: 15px, $lineHeight: 1.25);
+	@media screen and (min-width: 480px) {
+		& {
+			@include primary-button($padding: 9px 14px, $fontSize: 15px, $lineHeight: 1.25);
 
-      &--how-made {
-        @include primary-button(
-          $padding: 9px 14px,
-          $fontSize: 15px,
-          $lineHeight: 1.25,
-          $textColor: $primary-color,
-          $bgColor: $text-secondary
-        );
-      }
-    }
-  }
+			&--how-made {
+				@include primary-button(
+					$padding: 9px 14px,
+					$fontSize: 15px,
+					$lineHeight: 1.25,
+					$textColor: $primary-color,
+					$bgColor: $text-secondary
+				);
+			}
+		}
+	}
 
-  @media screen and (min-width: 768px) {
-    & {
-      @include primary-button($padding: 9px 14px, $fontSize: 12px, $lineHeight: 1.25);
+	@media screen and (min-width: 768px) {
+		& {
+			@include primary-button($padding: 9px 14px, $fontSize: 12px, $lineHeight: 1.25);
 
-      &--how-made {
-        @include primary-button(
-          $padding: 9px 14px,
-          $fontSize: 12px,
-          $lineHeight: 1.25,
-          $textColor: $primary-color,
-          $bgColor: $text-secondary
-        );
-      }
-    }
-  }
-  @include transition1($firstProperty: background-color);
+			&--how-made {
+				@include primary-button(
+					$padding: 9px 14px,
+					$fontSize: 12px,
+					$lineHeight: 1.25,
+					$textColor: $primary-color,
+					$bgColor: $text-secondary
+				);
+			}
+		}
+	}
+	@include transition1($firstProperty: background-color);
 
-  &:hover,
-  &:focus {
-    background-color: $btn-dark;
-  }
+	&:hover,
+	&:focus {
+		background-color: $btn-dark;
+	}
 
-  &--how-made:hover,
-  &--how-made:focus {
-    background-color: $btn-light;
-  }
+	&--how-made:hover,
+	&--how-made:focus {
+		background-color: $btn-light;
+	}
 
-  &--display {
-    display: flex;
-    margin-top: 20px;
+	&--display {
+		display: flex;
+		margin-top: 20px;
 
-    @media screen and (min-width: 1280px) {
-      margin-top: 25px;
-    }
-  }
+		@media screen and (min-width: 1280px) {
+			margin-top: 25px;
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .information {
-    display: none;
-  }
+	.information {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 768px) {
-  .information {
-    display: flex;
-    margin-top: 20px;
+	.information {
+		display: flex;
+		margin-top: 20px;
 
-    &__position {
-      padding-top: 70px;
-    }
+		&__position {
+			padding-top: 70px;
+		}
 
-    &__image {
-      width: 180px;
-    }
+		&__image {
+			width: 180px;
+		}
 
-    &__disc {
-      color: $text-secondary;
-      max-width: 125px;
-      height: 48px;
-      font-size: 10px;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
+		&__disc {
+			color: $text-secondary;
+			max-width: 125px;
+			height: 48px;
+			font-size: 10px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
 
-    &__button {
-      padding: 4px 8px;
-      border: none;
-      background-color: $text-secondary;
-      fill: $primary-color;
-      border-radius: 50%;
-      text-align: center;
-      @include transition1($firstProperty: background-color);
+		&__button {
+			padding: 4px 8px;
+			border: none;
+			background-color: $text-secondary;
+			fill: $primary-color;
+			border-radius: 50%;
+			text-align: center;
+			@include transition1($firstProperty: background-color);
 
-      &:hover,
-      &:focus {
-        background-color: $btn-light;
-      }
-    }
+			&:hover,
+			&:focus {
+				background-color: $btn-light;
+			}
+		}
 
-    @media screen and (min-width: 1280px) {
-      & {
-        margin-top: 47px;
-      }
+		@media screen and (min-width: 1280px) {
+			& {
+				margin-top: 47px;
+			}
 
-      &__image {
-        width: 188px;
-      }
-    }
-  }
+			&__image {
+				width: 188px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {
-  .hero__elements {
-    display: none;
-  }
+	.hero__elements {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 768px) {
-  .hero__elements {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 15px;
+	.hero__elements {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 15px;
 
-    &--1 {
-      margin-bottom: 15px;
-    }
+		&--1 {
+			margin-bottom: 15px;
+		}
 
-    &--3 {
-      z-index: 1;
-      position: absolute;
-      bottom: 0;
-      width: 190px;
-    }
-  }
+		&--3 {
+			z-index: 1;
+			position: absolute;
+			bottom: 0;
+			width: 190px;
+		}
+	}
 
-  @media screen and (min-width: 1280px) {
-    .hero__elements {
-      margin-top: 70px;
+	@media screen and (min-width: 1280px) {
+		.hero__elements {
+			margin-top: 70px;
 
-      &--1 {
-        margin-bottom: 50px;
-      }
+			&--1 {
+				margin-bottom: 50px;
+			}
 
-      &--1,
-      &--2 {
-        transform: scale(1.5);
-      }
+			&--1,
+			&--2 {
+				transform: scale(1.5);
+			}
 
-      &--3 {
-        width: 293px;
-      }
-    }
-  }
+			&--3 {
+				width: 293px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1279px) {
-  .desktop-nav {
-    display: none;
-  }
+	.desktop-nav {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-  .desktop-nav {
-    z-index: 1;
-    display: block;
-    align-self: center;
+	.desktop-nav {
+		z-index: 1;
+		display: block;
+		align-self: center;
 
-    &__list {
-      display: flex;
-    }
+		&__list {
+			display: flex;
+		}
 
-    &__item {
-      margin-right: 35px;
-      @include transition1($firstProperty: transform);
+		&__item {
+			margin-right: 35px;
+			@include transition1($firstProperty: transform);
 
-      &:last-child {
-        margin-right: 0;
-      }
-      &:hover,
-      &:focus {
-        transform: scale(1.2);
-      }
-    }
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover,
+			&:focus {
+				transform: scale(1.2);
+			}
+		}
 
-    &__link {
-      color: $text-secondary;
-      font-size: 16px;
-      line-height: 1.31;
-      font-weight: 700;
-      @include transition1($firstProperty: color);
+		&__link {
+			color: $text-secondary;
+			font-size: 16px;
+			line-height: 1.31;
+			font-weight: 700;
+			@include transition1($firstProperty: color);
 
-      &:hover,
-      &:focus {
-        color: $primary-color;
-      }
-    }
-  }
+			&:hover,
+			&:focus {
+				color: $primary-color;
+			}
+		}
+	}
 }

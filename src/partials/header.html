@@ -1,58 +1,69 @@
 <header class="header">
     <div class="container header--position">
+
         <!-- Логотип хедера -->
         <div class="header__tablet">
             <a href="" class="header__logo">
                 <svg class="header__logo-icon" width="200" height="50">
                     <use href="images/header/header-icons.svg#icon-logo"></use>
-                </svg></a>
+                </svg>
+            </a>
+
             <!-- Навигация для Десктоп-версии -->
             <nav class="desktop-nav">
                 <ul class="desktop-nav__list">
                     <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#">Home</a></li>
                     <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#about">About us</a></li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#How_its_made">How it’s
-                            made?</a></li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#macy">Our products</a>
-                    </li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#contacts">Contact</a>
-                    </li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#How_its_made">How it’s made?</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#macy">Our products</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#contacts">Contact</a></li>
                 </ul>
             </nav>
 
-            <!-- Мобильное меню с навигацией -->
-            <button class="mobile-menu-button open-menu" aria-expanded="false" aria-controls="mobile-menu"
-                aria-label="Mobile menu open">
+            <!-- Кнопка открытия Мобильного меню-->
+            <button class="mobile-menu-button open-menu" aria-expanded="false" aria-controls="mobile-menu"aria-label="Mobile menu open" data-modal-open>
                 <svg class="mobile-menu-button__icon" width="40" height="40">
                     <use href="images/header/header-icons.svg#burger-open"></use>
                 </svg>
             </button>
+
             <!-- Кнопка "Buy now" для таблетки -->
-            <button class="header__buy-now-button" aria-label="Buy now" header-modal-open>Buy now <svg
-                    class="header__buy-now-button--arrow" width="10" height="10">
+            <button class="header__buy-now-button" aria-label="Buy now" header-modal-open>Buy now 
+                <svg class="header__buy-now-button--arrow" width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
-                </svg></button>
+                </svg>
+            </button>
         </div>
+
         <!-- Мобильное навигационное меню -->
-        <nav class="mobile-nav" id="mobile-menu">
-            <button class="mobile-menu-button close-menu" aria-label="Mobile menu close">
+        <div class="mobile__backdrop is-hidden" data-modal></div>
+            <button class="mobile-menu-button close-menu" aria-label="Mobile menu close" data-modal-close>
                 <svg class="mobile-menu-button__icon" width="40" height="40">
                     <use href="images/header/header-icons.svg#burger-close"></use>
                 </svg>
             </button>
-            <button class="mobile-nav__buy-now-button" aria-label="Buy now">Buy now <svg
-                    class="mobile-nav__buy-now-button--arrow" width="10" height="10">
-                    <use href="images/header/header-icons.svg#icon-moresign"></use>
-                </svg></button>
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#">Home</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#about">About us</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#How_its_made">How it’s
-                        made?</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#macy">Our products</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#contacts">Contact</a></li>
-            </ul>
-        </nav>
+        
+            <nav class="mobile-nav" id="mobile-menu" data-menu-mobile>
+
+                <button class="mobile-nav__buy-now-button" aria-label="Buy now" header-modal-open>Buy now 
+                    <svg class="mobile-nav__buy-now-button--arrow" width="10" height="10">
+                        <use href="images/header/header-icons.svg#icon-moresign"></use>
+                    </svg>
+                </button>
+
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#">Home</a></li>
+                    <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#about">About us</a></li>
+                    <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#How_its_made">How it’s made?</a></li>
+                    <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#macy">Our products</a></li>
+                    <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#contacts">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    
+
+
         <!-- Герой -->
         <div class="hero__section">
             <div class="hero">
