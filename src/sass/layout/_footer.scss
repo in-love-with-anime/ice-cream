@@ -153,6 +153,11 @@
 
   &__link {
     color: $primary-color;
+
+    &:hover,
+    &:focus {
+      color: $btn-dark;
+    }
   }
 }
 
