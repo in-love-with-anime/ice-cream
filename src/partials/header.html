@@ -28,7 +28,7 @@
                 </svg>
             </button>
             <!-- Кнопка "Buy now" для таблетки -->
-            <button class="header__buy-now-button" aria-label="Buy now" header-modal-open>Buy now 
+            <button class="header__buy-now-button" aria-label="Buy now" data-header-modal-open>Buy now 
                 <svg
                     class="header__buy-now-button--arrow" width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
@@ -42,7 +42,7 @@
                     <use href="images/header/header-icons.svg#burger-close"></use>
                 </svg>
             </button>
-            <button class="mobile-nav__buy-now-button" aria-label="Buy now" header-modal-open>Buy now 
+            <button class="mobile-nav__buy-now-button" aria-label="Buy now" data-header-modal-open>Buy now 
                 <svg
                     class="mobile-nav__buy-now-button--arrow" width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
@@ -76,23 +76,40 @@
                         href="#How_its_made">How it’s
                         made?</a>
                 </div>
+
+
                 <!-- Героическое описание молока -->
                 <div class="information">
+
                     <picture class="information__image">
                         <source
                             srcset="./images/header/milk-desktop/milk.png 1x, ./images/header/milk-desktop/milk@2x.png 2x, ./images/header/milk-desktop/milk@3x.png 3x">
                         <img src="./images/header/milk-desktop/milk.png" alt="Bio-organic milk">
                     </picture>
+
                     <div class="information__position">
-                        <p class="information__disc">Obcaecati totam dolore fugiat at earum aperiam vel tempore officia
-                            aliquid culpa a
-                            nulla
-                            molestiae.</p>
-                        <button class="information__button"><svg width="8" height="8">
-                                <use href="images/header/header-icons.svg#icon-arrow-right"></use>
-                            </svg></button>
+                        
+                        <input class="information__checkbox" type="checkbox" id="information__checkbox" hidden></input>
+                        <p class="information__text">Obcaecati totam dolore fugiat at earum aperiam vel tempore officia aliquid culpa a nulla molestiae</p>
+
+                        <label class="information__label" type="checkbox" for="information__checkbox">
+                            <span class="information__read-more">
+                                <svg class="information__icon-arrow-right" width="12" height="12">
+                                    <use href="images/header/header-icons.svg#icon-arrow-right"></use>
+                                </svg>
+                            </span>
+
+                            <span class="information__read-less">
+                                <svg class="information__icon-close" width="16" height="16">
+                                    <use href="images/icons/icons.svg#icon-close"></use>
+                                </svg>
+                            </span>
+                        </label> 
+
                     </div>
+
                 </div>
+
             </div>
             <!-- Краевые СВГ и Галочка -->
             <div class="hero__elements">

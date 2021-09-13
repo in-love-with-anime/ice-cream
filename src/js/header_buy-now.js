@@ -1,8 +1,8 @@
 (() => {
-  const modal = document.querySelector('[header-modal]');
-  const closeModalBtn = document.querySelector('[header-modal-close]');
+  const modal = document.querySelector('[data-header-modal]');
+  const closeModalBtn = document.querySelector('[data-header-modal-close]');
 
-  const openModalBtns = document.querySelectorAll('[header-modal-open]');
+  const openModalBtns = document.querySelectorAll('[data-header-modal-open]');
   const openModalBtn1 = openModalBtns[0];
   const openModalBtn2 = openModalBtns[1];
 

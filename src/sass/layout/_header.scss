@@ -446,6 +446,7 @@
   }
 }
 
+// Молоко
 @media screen and (max-width: 767px) {
   .information {
     display: none;
@@ -458,50 +459,90 @@
     margin-top: 20px;
 
     &__position {
-      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 15px;
+      width: 114px;
     }
 
     &__image {
       width: 180px;
     }
 
-    &__disc {
+    &__text {
+      display: none;
+      align-items: center;
       color: $text-secondary;
       max-width: 125px;
       height: 48px;
       font-size: 10px;
       line-height: 1.5;
       margin-bottom: 20px;
-    }
+      @include transition1 (display);
+    } 
+  }
 
-    &__button {
-      padding: 4px 8px;
-      border: none;
-      background-color: $text-secondary;
-      fill: $primary-color;
-      border-radius: 50%;
-      text-align: center;
-      box-shadow: $header-buttons-shadow;
-      @include transition2($firstProperty: background-color, $secondProperty: box-shadow);
+  .information__read-more, .information__read-less {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    @include transition1 (transform);
+  }
 
-      &:hover,
-      &:focus {
-        box-shadow: $hover-buttons-shadow;
-        background-color: $btn-light;
-      }
-    }
+  .information__read-more:hover, .information__read-more:focus {
+    transform: scale(1.2)
+  }
 
-    @media screen and (min-width: 1280px) {
-      & {
-        margin-top: 47px;
-      }
+  .information__read-less:hover, .information__read-less:focus {
+    transform: scale(1.2)
+  }
+
+  .information__icon-arrow-right {
+    fill: $primary-color;
+  }
+
+  .information__icon-close {
+    fill: $primary-color;
+  }
+
+  .information__checkbox:checked + .information__text {
+    display: flex;
+  }
+
+  .information__checkbox:checked ~ .information__label .information__read-more {
+    display: none;
+  }
+
+  .information__checkbox:checked ~ .information__label .information__read-less {
+    display: flex;
+  }
+
+  .information__read-less {
+    display: none;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+  .information {
+    margin-top: 47px;
 
       &__image {
         width: 188px;
       }
-    }
-  }
+  }  
 }
+
+
 
 @media screen and (max-width: 767px) {
   .hero__elements {
