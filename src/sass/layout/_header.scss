@@ -67,13 +67,15 @@
       $bgColor: $text-secondary
     );
     font-weight: 700;
-    @include transition1($firstProperty: background-color);
+    box-shadow: $header-buttons-shadow;
+    @include transition2($firstProperty: background-color, $secondProperty: box-shadow);
     &--arrow {
       margin-left: 20px;
     }
     &:hover,
     &:focus {
       background-color: $btn-light;
+      box-shadow: $hover-buttons-shadow;
     }
   }
 }
@@ -112,11 +114,12 @@
 
     &.open-menu {
       fill: $primary-color;
-      @include transition1($firstProperty: fill);
+      @include transition2($firstProperty: fill, $secondProperty: box-shadow);
 
       &:hover,
       &:focus {
         fill: $text-secondary;
+        box-shadow: $open-menu-shadow;
       }
     }
 
@@ -126,11 +129,12 @@
       top: 12px;
       right: 20px;
       fill: $text-secondary;
-      @include transition1($firstProperty: fill);
+      @include transition2($firstProperty: fill, $secondProperty: box-shadow);
 
       &:hover,
       &:focus {
         fill: $primary-color;
+        box-shadow: $hover-buttons-shadow;
       }
     }
   }
@@ -211,10 +215,11 @@
     $textColor: $primary-color,
     $bgColor: $text-secondary
   );
+  box-shadow: $header-buttons-shadow;
   font-weight: 700;
   margin-bottom: 20px;
   margin-left: 20px;
-  @include transition1($firstProperty: background-color);
+  @include transition2($firstProperty: background-color, $secondProperty: box-shadow);
 
   &--arrow {
     margin-left: 16px;
@@ -223,6 +228,7 @@
   &:hover,
   &:focus {
     background-color: $btn-light;
+    box-shadow: $hover-buttons-shadow;
   }
 
   @media screen and (min-width: 480px) {
@@ -373,6 +379,7 @@
   z-index: 1;
   @include primary-button($padding: 9px 14px, $fontSize: 9px, $lineHeight: 1.25);
   font-weight: 400;
+  box-shadow: $header-buttons-shadow;
 
   &--how-made {
     @include primary-button(
@@ -416,11 +423,12 @@
       }
     }
   }
-  @include transition1($firstProperty: background-color);
+  @include transition2($firstProperty: background-color, $secondProperty: box-shadow);
 
   &:hover,
   &:focus {
     background-color: $btn-dark;
+    box-shadow: $hover-buttons-shadow;
   }
 
   &--how-made:hover,
@@ -473,10 +481,12 @@
       fill: $primary-color;
       border-radius: 50%;
       text-align: center;
-      @include transition1($firstProperty: background-color);
+      box-shadow: $header-buttons-shadow;
+      @include transition2($firstProperty: background-color, $secondProperty: box-shadow);
 
       &:hover,
       &:focus {
+        box-shadow: $hover-buttons-shadow;
         background-color: $btn-light;
       }
     }

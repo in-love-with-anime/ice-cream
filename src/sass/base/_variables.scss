@@ -33,6 +33,12 @@ $border-mobilemenu: #e18298;
 
 // Тени
 $box-shadow-card: rgba(212, 20, 67, 0.1);
+$header-buttons-shadow: 5px 4px 2px rgba(225, 121, 146, 0.12), 5px 8px 4px rgba(255, 121, 146, 0.06),
+  5px 8px 6px rgba(255, 124, 146, 0.16);
+$hover-buttons-shadow: 5px 4px 4px rgba(212, 20, 67, 0.12), 5px 8px 8px rgba(212, 20, 67, 0.06),
+  5px 8px 12px rgba(212, 20, 67, 0.16);
+$open-menu-shadow: 5px 4px 4px rgba(255, 255, 255, 0.12), 5px 8px 8px rgba(255, 255, 255, 0.06),
+  5px 8px 12px rgba(255, 255, 255, 0.16);
 
 // // Цвет точек
 $dots-primary-color: #d9d9d9;
