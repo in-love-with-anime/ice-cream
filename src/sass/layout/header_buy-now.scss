@@ -85,15 +85,20 @@
 
 .request-form__slogan {
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     font-family: $secondary-font;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.15;
     text-align: center;
 
     color: $bg-contacts-button;
+
+        @media screen and (min-width: 480px) {
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
 }
 
 .request-form__field {
@@ -135,7 +140,7 @@
 }
 
 .request-form__input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #ffe1e8 inset !important;
+    box-shadow: 0 0 0 30px #ffe1e8 inset !important;
 }
 
 
