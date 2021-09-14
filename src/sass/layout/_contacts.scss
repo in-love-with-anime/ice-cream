@@ -1,41 +1,92 @@
 .contacts-section {
-  padding-top: 86px;
-  padding-bottom: 113px;
-  background-image: linear-gradient(
-    to bottom,
-    $text-secondary 10.17%,
-    $bg-section 10.17%,
-    $bg-section 100%
-  );
+  @media screen and (max-width: 767px) {
+    padding-top: 86px;
+    padding-bottom: 113px;
+    background-image: linear-gradient(
+      to bottom,
+      $text-secondary 10.17%,
+      $bg-section 10.17%,
+      $bg-section 100%
+    );
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 119px;
+    padding-bottom: 158px;
+    background-image: linear-gradient(
+      to bottom,
+      $text-secondary 20.82%,
+      $bg-section 20.82%,
+      $bg-section 100%
+    );
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 132px;
+    padding-bottom: 165px;
+    background-image: linear-gradient(
+      to bottom,
+      $text-secondary 23.42%,
+      $bg-section 23.42%,
+      $bg-section 100%
+    );
+  }
 }
+
 .card-list__representation.alternate {
   background-color: $bg-section3;
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     width: 130px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 138px;
   }
 }
 .card-list {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 54px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: 81px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 86px;
+  }
   &__item {
     background-color: $text-secondary;
     border-radius: 24px;
     box-shadow: 0px 8px 30px $box-shadow-card;
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       display: block;
       padding: 43px 20px;
       width: 220px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 54px;
     }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      padding: 50px 32px 50px 31px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 51px 44px 62px 43px;
+    }
+
     &:hover,
     &:focus {
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
   }
   &__item:not(:last-child) {
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 30px;
     }
   }
   &__representation {
@@ -43,26 +94,41 @@
     background-color: $bg-section2;
     border-radius: 4px;
     text-align: center;
-    align-items: center;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
-    letter-spacing: 0.04em;
     color: $text-secondary;
     text-transform: uppercase;
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       width: 80px;
       margin-bottom: 25px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 73px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1.86;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
     }
   }
   &__location {
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
-    letter-spacing: 0.04em;
     color: $text-primary;
 
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
       margin-bottom: 10px;
     }
   }
@@ -71,75 +137,135 @@
     font-size: 12px;
     line-height: 1.5;
     color: $text-primary-lighten;
-    @media screen and (max-width: 479px) {
-      padding-bottom: 25px;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: 14px;
+      line-height: 1.66;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.83;
+      letter-spacing: 0.04em;
     }
   }
   &__schedule-thumb {
-    @media screen and (max-width: 479px) {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    @media screen and (max-width: 767px) {
       padding-top: 25px;
       padding-bottom: 25px;
+      margin-top: 25px;
       margin-bottom: 25px;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      margin-top: 32px;
+      margin-bottom: 32px;
     }
   }
   &__sсhedule-days {
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
-    letter-spacing: 0.04em;
     color: $text-primary;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      letter-spacing: 0.04em;
+    }
   }
   &__schedule-weekends {
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       margin-top: 10px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      margin-top: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-top: 15px;
     }
   }
   &__schedule-time {
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
-    letter-spacing: 0.04em;
     color: $secondary-color;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+    }
   }
   &__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.85;
     color: $text-primary-lighten;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.83;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+    }
   }
 }
 .button {
   border: transparent;
   border-radius: 22px;
-  height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-size: 16px;
   line-height: 1.31;
   text-align: center;
   align-items: center;
-  @media screen and (max-width: 479px) {
+
+  @media screen and (max-width: 767px) {
     width: 161px;
   }
 }
 
 .button-set {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
   &__item:first-child {
-    @media screen and (max-width: 479px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 15px;
     }
   }
   &__primary-button {
     color: $text-secondary;
     background-color: $bg-contacts-button;
+    display: inline-block;
     &:hover,
     &:focus {
       background-color: $btn-dark;
     }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      width: 191px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 198px;
+    }
   }
+
   &__inverse-button {
     color: $bg-contacts-button;
     background-color: $text-secondary;
@@ -147,102 +273,20 @@
     &:focus {
       background-color: $btn-light;
     }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      width: 174px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 180px;
+    }
   }
   &__primary-bracket {
     margin-left: 8px;
+    @media screen and (min-width: 768px) {
+      margin-left: 13px;
+    }
   }
   &__inverse-bracket {
     margin-left: 13px;
   }
-
-  // флексы и верхние маржины для списка кнопок 
-
-  @media screen and (max-width: 767px) {
-    margin-top: 54px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    margin-top: 81px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    justify-content: center;
-    margin-top: 86px;
-  }
-}
-
-// ссылка Locations
-
-.contacts__locations {
-  display: inline-block;
-
-  color: $text-secondary;
-  background-color: $bg-contacts-button;
-  border-radius: 22px;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 161px;
-    height: 44px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 191px;
-    height: 44px;
-    margin-right: 15px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 198px;
-    height: 44px;
-    margin-right: 15px;
-  }
-}
-
-.button-set__inverse-button {
-   display: inline-block;
-
-   color: $primary-color;
-   background-color: $text-secondary;
-   border-radius: 22px;
-
-   @media screen and (max-width: 767px) {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 161px;
-     height: 44px;
-     margin-left: auto;
-     margin-right: auto;
-   }
-
-   @media screen and (min-width: 768px) {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 174px;
-     height: 44px;
-   }
-
-   @media screen and (min-width: 1280px) {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 180px;
-     height: 44px;
-   }
 }
