@@ -1,4 +1,5 @@
 .container__about {
+  position: relative;
   padding: 125px 0 39px;
   background: $bg-section;
   // background-image: linear-gradient(to right, $bg-section, $bg-section),
@@ -14,7 +15,11 @@
       background-image: url('../images/about/bg-about-mobile@1x.png');
       background-size: contain;
       background-repeat: no-repeat;
+<<<<<<< Updated upstream
       background-position: bottom;
+=======
+      background-position: left bottom 100px;
+>>>>>>> Stashed changes
     }
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -43,7 +48,11 @@
       background-image: url('../images/about/bg-about-desktop@1x.png');
       background-size: contain;
       background-repeat: no-repeat;
+<<<<<<< Updated upstream
       background-position: bottom;
+=======
+      background-position: left bottom 100px;
+>>>>>>> Stashed changes
     }
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -60,6 +69,15 @@
       }
     }
   }
+<<<<<<< Updated upstream
+=======
+
+  @media screen and (min-width: 1280px) {
+    & {
+      background-position: center bottom -21px;
+    }
+  }
+>>>>>>> Stashed changes
 }
 
 .about-head {
@@ -267,6 +285,7 @@
   }
 }
 
+<<<<<<< Updated upstream
 // .about__button {
 //   display: flex;
 //   align-items: center;
@@ -289,6 +308,9 @@
 //     border: 1px solid $primary-color;
 //   }
 // }
+=======
+//    Form-modal OPEN
+>>>>>>> Stashed changes
 .about__button {
   @include primary-button(
     $padding: 12px 33px,

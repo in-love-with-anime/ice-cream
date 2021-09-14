@@ -1,0 +1,262 @@
+//    Form-modal
+//
+.backdrop-about {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(220, 140, 185, 0.4);
+  overflow-y: scroll;
+  transform: translate(100%);
+
+  @include transition1(transform);
+
+  z-index: 9999;
+
+  &.is-open {
+    transform: translate(0);
+  }
+}
+
+.about-modal__tumba {
+  position: absolute;
+  max-width: 1280px;
+  width: 100vw;
+  height: 100vh;
+  padding: 55px 40px 40px;
+  text-align: center;
+
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: $bg-section;
+
+  @media screen and (max-width: 767px) {
+    & {
+      background-image: url('../images/about/bg-about-mobile@1x.png');
+      background-size: 300%;
+      background-repeat: no-repeat;
+      background-position: right 17% top 9%;
+      //   background-size: auto;
+      //   background-repeat: no-repeat;
+      //   background-position: left bottom 100px;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/about/bg-about-mobile@2x.png');
+      }
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      & {
+        background-image: url('../images/about/bg-about-mobile@3x.png');
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      border-radius: 10px;
+      width: 80%;
+      height: 80%;
+    }
+
+    & {
+      background-image: url('../images/about/bg-about-desktop@1x.png');
+      background-size: 300%;
+      background-repeat: no-repeat;
+      background-position: right 16% top;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/about/bg-about-desktop@2x.png');
+      }
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      & {
+        background-image: url('../images/about/bg-about-desktop@3x.png');
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      padding: 56px;
+    }
+  }
+}
+.about-modal__close {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 2%;
+  right: 2%;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    & {
+      top: 12%;
+      right: 11%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      right: 12%;
+    }
+  }
+}
+
+.about-modal__close--icon {
+  height: 35px;
+  width: 35px;
+  fill: $secondary-color;
+
+  @include transition1(fill);
+
+  .about-modal__close:hover &,
+  .about-modal__close:focus & {
+    fill: $bg-contacts-button;
+    cursor: pointer;
+  }
+}
+
+.about-modal__icon {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 30px;
+  }
+}
+
+.about-modal__icon-cow {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/cow.svg');
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.about-modal__icon-apple {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/apple.svg');
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.about-modal__icon-heart {
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/heart.svg');
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.about-modal__head {
+  margin-top: 50px;
+  @media screen and (min-width: 1280px) {
+    font-size: 19px;
+    line-height: 1.9;
+  }
+}
+
+.about-modal__product {
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+.about-modal__product--reverse {
+  flex-direction: row-reverse;
+}
+
+.about-modal__product--img {
+  margin: 0 auto;
+  width: 249px;
+
+  @media screen and (min-width: 1280px) {
+    width: 498px;
+    height: 440px;
+  }
+}
+.about-modal__text {
+  margin-top: 29px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $text-primary-lighten;
+
+  @media screen and (min-width: 768px) {
+    & {
+      letter-spacing: 0.04em;
+      margin-top: 25px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      margin-top: 35px;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+  }
+}
+
+.about-modal__text--product {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
+}
