@@ -569,3 +569,69 @@
   opacity: 0;
   visibility: hidden;
 }
+
+
+
+//  //  // ANIMATION ******************************
+
+
+// scale
+
+.products__item:hover .products__name::before {
+  animation-name: imagesRotation;
+  transform-origin: bottom center;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes imagesRotation {
+
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+// rotate
+
+// .products__item:hover .products__name::before,
+// .products__item:focus .products__name::before {
+//   animation-name: imagesRotation;
+//   transform-origin: bottom center;
+//   animation-duration: 3000ms;
+//   animation-timing-function: linear;
+//   animation-iteration-count: infinite;
+//   animation-direction: normal;
+// }
+
+
+// @keyframes imagesRotation {
+
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   25% {
+//     transform: rotate(-15deg);
+//   }
+//   75% {
+//     transform: rotate(15deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
