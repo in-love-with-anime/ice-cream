@@ -76,6 +76,8 @@
   text-align: center;
   border-radius: 24px;
 
+  
+
   // после ширины экрана 320px контент не тянется
 
   // @media screen and (max-width: 319px) {
@@ -483,9 +485,16 @@
 
   transition: 250ms;
 
+  box-shadow: 2px 1px 4px 3px rgba(245, 155, 178, 0.09),
+  -1px 1px 4px 3px rgba(201, 167, 175, 0.049),
+  1px 2px 4px 3px rgba(230, 116, 145, 0.07);
+
   &:hover,
   &:focus {
     transform: scale(1.2);
+    box-shadow: 0px 0px 10px 3px rgba(211, 48, 89, 0.12),
+    0px 0px 10px 3px rgba(189, 62, 93, 0.06),
+    0px 0px 10px 3px rgba(235, 26, 78, 0.16);
   }
 
   @media screen and (max-width: 767px) {
@@ -577,16 +586,17 @@
 
 // scale
 
-.products__item:hover .products__name::before {
-  animation-name: imagesRotation;
-  transform-origin: bottom center;
+.products__item:hover .products__name::before,
+.products__item:focus .products__name::before {
+  animation-name: shadowScale;
+  transform-origin: center center;
   animation-duration: 3000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
 }
 
-@keyframes imagesRotation {
+@keyframes shadowScale {
 
   0% {
     transform: scale(1);
@@ -609,29 +619,29 @@
 
 // rotate
 
-// .products__item:hover .products__name::before,
-// .products__item:focus .products__name::before {
-//   animation-name: imagesRotation;
-//   transform-origin: bottom center;
-//   animation-duration: 3000ms;
-//   animation-timing-function: linear;
-//   animation-iteration-count: infinite;
-//   animation-direction: normal;
-// }
+.products__item:hover .products__name::before,
+.products__item:focus .products__name::before {
+  animation-name: imagesRotation;
+  transform-origin: bottom center;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
 
 
-// @keyframes imagesRotation {
+@keyframes imagesRotation {
 
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   25% {
-//     transform: rotate(-15deg);
-//   }
-//   75% {
-//     transform: rotate(15deg);
-//   }
-//   100% {
-//     transform: rotate(0deg);
-//   }
-// }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
