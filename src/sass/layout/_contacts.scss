@@ -22,12 +22,28 @@
   @media screen and (min-width: 1280px) {
     padding-top: 132px;
     padding-bottom: 165px;
-    background-image: linear-gradient(
-      to bottom,
-      $text-secondary 23.42%,
-      $bg-section 23.42%,
-      $bg-section 100%
-    );
+    background-image: url('../images/contacts-bg/contacts-sectionbg.png'),
+      linear-gradient(to bottom, $text-secondary 23.42%, $bg-section 23.42%, $bg-section 100%);
+    background-repeat: no-repeat;
+    background-position: center top 37%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .contacts-section {
+        background-image: url('../images/contacts-bg/contacts-sectionbg@2x.png'),
+          linear-gradient(to bottom, $text-secondary 23.42%, $bg-section 23.42%, $bg-section 100%);
+        background-repeat: no-repeat;
+        background-position: center top 37%;
+      }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      .contacts-section {
+        background-image: url('../images/contacts-bg/contacts-sectionbg@3x.png'),
+          linear-gradient(to bottom, $text-secondary 23.42%, $bg-section 23.42%, $bg-section 100%);
+        background-repeat: no-repeat;
+        background-position: center top 37%;
+      }
+    }
   }
 }
 
@@ -53,11 +69,15 @@
   }
   @media screen and (min-width: 1280px) {
     margin-bottom: 86px;
+    // position: relative;
+    // z-index: 5;
   }
   &__item {
     background-color: $text-secondary;
     border-radius: 24px;
     box-shadow: 0px 8px 30px $box-shadow-card;
+
+    @include transition2($firstProperty: filter, $secondProperty: transform);
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -70,12 +90,13 @@
       padding: 50px 32px 50px 31px;
     }
     @media screen and (min-width: 1280px) {
-      padding: 51px 44px 62px 43px;
+      padding: 51px 43px 62px;
     }
 
     &:hover,
     &:focus {
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(5px 8px 12px rgba(212, 20, 67, 0.16));
+      transform: scale(1.05);
     }
   }
   &__item:not(:last-child) {
@@ -254,6 +275,9 @@
     color: $text-secondary;
     background-color: $bg-contacts-button;
     display: inline-block;
+
+    @include transition2($firstProperty: background-color, $secondProperty: transform);
+
     &:hover,
     &:focus {
       background-color: $btn-dark;
@@ -269,6 +293,9 @@
   &__inverse-button {
     color: $bg-contacts-button;
     background-color: $text-secondary;
+
+    @include transition2($firstProperty: background-color, $secondProperty: transform);
+
     &:hover,
     &:focus {
       background-color: $btn-light;
