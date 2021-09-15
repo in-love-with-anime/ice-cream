@@ -1,0 +1,40 @@
+.toTop {
+    position:fixed;
+    bottom:20px; /* отступ кнопки от нижнего края страницы*/
+    right:10px;
+    padding:7px;
+    width:40px;
+    height: 40px;
+
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    text-align:center;
+    
+    cursor:pointer;
+
+    box-shadow: $header-buttons-shadow;
+
+    @media screen and (min-width: 1280px) {
+        bottom:30px; 
+        right:30px;
+        padding:10px;
+        width:60px;
+        height: 60px;
+        
+    }
+}
+
+.icon-toTop {
+    fill: $secondary-color;
+
+    &:hover, &:focus {
+        fill: $primary-color;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width:40px;
+        height: 40px;
+    }
+}

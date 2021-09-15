@@ -42,6 +42,9 @@
 
     <include src="./partials/footer.html"></include>
 
+    <!-- Button "toTop" -->
+    <include src="./partials/toTop.html"></include>
+
     <!-- Modals -->
     <include src="./partials/header_buy-now.html"></include>
     <include src="./partials/modal-about.html"></include>
@@ -67,5 +70,19 @@
     <script src="./js/modal-about.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
     <script src="./js/franchise.js"></script>
+
+    <!-- Кнопка "наверх" -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+       $(window).scroll(function() {if($(this).scrollTop() != 0) {
+       $('#toTop').fadeIn();} else {
+       $('#toTop').fadeOut();}
+       });
+       $('#toTop').click(function() {
+       $('body,html').animate({scrollTop:0},800);
+       });
+       });
+      </script>
   </body>
 </html>
