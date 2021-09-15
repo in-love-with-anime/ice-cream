@@ -100,6 +100,10 @@
   }
 }
 
+.franchise-modal__input:-webkit-autofill {
+  box-shadow: 0 0 0 30px #ffe1e8 inset !important;
+}
+
 .franchise-modal__close {
   border: none;
   background-color: transparent;

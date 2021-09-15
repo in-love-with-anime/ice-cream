@@ -2,21 +2,19 @@
     <div class="container header--position">
         <!-- Логотип хедера -->
         <div class="header__tablet">
-            <a href="" class="header__logo">
+            <a href="#" class="header__logo" aria-label="Refreshes the page">
                 <svg class="header__logo-icon" width="200" height="50">
                     <use href="images/header/header-icons.svg#icon-logo"></use>
-                </svg></a>
+                </svg>
+            </a>
             <!-- Навигация для Десктоп-версии -->
             <nav class="desktop-nav">
                 <ul class="desktop-nav__list">
                     <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#">Home</a></li>
                     <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#about">About us</a></li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#How_its_made">How it’s
-                            made?</a></li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#gallery">Our products</a>
-                    </li>
-                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#contacts">Contact</a>
-                    </li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#How_its_made">How it’s made?</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#gallery">Our products</a></li>
+                    <li class="desktop-nav__item"><a class="desktop-nav__link scrollto" href="#contacts">Contact</a></li>
                 </ul>
             </nav>
 
@@ -27,14 +25,16 @@
                     <use href="images/header/header-icons.svg#burger-open"></use>
                 </svg>
             </button>
+
             <!-- Кнопка "Buy now" для таблетки -->
             <button class="header__buy-now-button" aria-label="Buy now" data-header-modal-open>Buy now 
-                <svg
-                    class="header__buy-now-button--arrow" width="10" height="10">
+                <svg class="header__buy-now-button--arrow" width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
                 </svg>
             </button>
+
         </div>
+
         <!-- Мобильное навигационное меню -->
         <nav class="mobile-nav" id="mobile-menu">
             <button class="mobile-menu-button close-menu" aria-label="Mobile menu close">
@@ -42,21 +42,23 @@
                     <use href="images/header/header-icons.svg#burger-close"></use>
                 </svg>
             </button>
+
             <button class="mobile-nav__buy-now-button" aria-label="Buy now" data-header-modal-open>Buy now 
-                <svg
-                    class="mobile-nav__buy-now-button--arrow" width="10" height="10">
+                <svg class="mobile-nav__buy-now-button--arrow" width="10" height="10">
                     <use href="images/header/header-icons.svg#icon-moresign"></use>
                 </svg>
             </button>
+
             <ul class="mobile-nav__list" data-menu-links>
                 <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#">Home</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#about">About us</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#How_its_made">How it’s
-                        made?</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#How_its_made">How it’s made?</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#gallery">Our products</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__link scrollto" href="#contacts">Contact</a></li>
             </ul>
         </nav>
+
+
         <!-- Герой -->
         <div class="hero__section">
             <div class="hero">
@@ -64,17 +66,16 @@
                 <!-- Большая мороженка с кружком -->
                 <span class="hero__image--background"></span>
                 <picture class="hero__image">
-                    <source
-                        srcset="./images/header/icecream-desktop/icecream@2x.png 2x, ./images/header/icecream-desktop/icecream@3x.png 3x">
+                    <source srcset="./images/header/icecream-desktop/icecream@2x.png 2x, ./images/header/icecream-desktop/icecream@3x.png 3x">
                     <img src="./images/header/icecream-desktop/icecream.png" alt="Our Greatest Icecream">
                 </picture>
+
                 <!-- Две маленькие кнопки -->
                 <div class="hero__button--display">
                     <a class="hero__button hero__button--products scrollto" aria-label="Products"
                         href="#gallery">Products</a>
                     <a class="hero__button hero__button--how-made scrollto" aria-label="How it’s made?"
-                        href="#How_its_made">How it’s
-                        made?</a>
+                        href="#How_its_made">How it’s made?</a>
                 </div>
 
 
@@ -111,20 +112,23 @@
                 </div>
 
             </div>
+
             <!-- Краевые СВГ и Галочка -->
             <div class="hero__elements">
                 <svg class="hero__elements--1" width="55" height="56">
                     <use href="images/header/header-icons.svg#Group-22"></use>
                 </svg>
+
                 <svg class="hero__elements--2" width="63" height="55">
                     <use href="images/header/header-icons.svg#Group-23"></use>
                 </svg>
+                
                 <picture class="hero__elements--3">
-                    <source
-                        srcset="./images/header/galochka-desktop/galochka@2x.png 2x, ./images/header/galochka-desktop/galochka@3x.png 3x">
+                    <source srcset="./images/header/galochka-desktop/galochka@2x.png 2x, ./images/header/galochka-desktop/galochka@3x.png 3x">
                     <img src="./images/header/galochka-desktop/galochka.png" alt="So tasty!">
                 </picture>
             </div>
+
         </div>
     </div>
 </header>
