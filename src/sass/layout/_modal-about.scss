@@ -32,6 +32,7 @@
   text-align: center;
 
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   background-color: $bg-section;
 
